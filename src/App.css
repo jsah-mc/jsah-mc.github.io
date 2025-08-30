@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-base: #11111b;
+  --color-surface: #1e1e2e;
+  --color-text: #cdd6f4;
+  --color-overlay: #181825;
+  --color-subtle: #313244;
+}
+
+@layer components {
+  .sidebar-icons {
+    @apply relative flex items-center justify-center float-start h-12 w-12 mt-2 mb-2 mx-auto bg-base text-text rounded-4xl hover:bg-text hover:text-overlay hover:rounded-2xl transition-all duration-300;
+  }
+  .sidebar-icons-end {
+    @apply relative flex items-center justify-center h-12 w-12 mb-2 mx-auto bg-base text-text rounded-4xl hover:bg-text hover:text-overlay hover:rounded-2xl transition-all duration-300 mt-auto;
+  }
+  body {
+    @apply bg-base text-text pr-30 text-center flex h-screen items-center justify-center;
+  }
+}
