@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-basedark: #11111b;
+  --color-surfacedark: #1e1e2e;
+  --color-textdark: #cdd6f4;
+  --color-overlaydark: #181825;
+  --color-subtledark: #313244;
+  --color-baselight: #faf4ed;
+  --color-surfacelight: #fffaf3;
+  --color-textlight: #575279;
+  --color-overlaylight: #f2e9e1;
+  --color-subtlelight: #797593;
+  --animate-wiggle: wiggle 1000ms ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+  }
+}
+
+@layer components {
+  .sidebar-icons {
+    @apply relative flex items-center justify-center float-start h-12 w-12 mt-2 mb-2 mx-auto bg-baselight text-textlight hover:bg-textlight hover:text-baselight dark:bg-basedark dark:text-textdark rounded-4xl dark:hover:bg-textdark dark:hover:text-overlaydark hover:rounded-2xl transition-all duration-300;
+  }
+  .sidebar-icons-end {
+    @apply relative flex items-center justify-center h-12 w-12 mb-2 mx-auto bg-baselight text-textlight dark:bg-basedark dark:text-textdark rounded-4xl hover:text-baselight hover:bg-textlight dark:hover:bg-textdark dark:hover:text-overlaydark hover:rounded-2xl transition-all duration-300 mt-auto;
+  }
+  body {
+    @apply bg-baselight text-textlight dark:bg-basedark dark:text-textdark pr-30 text-center flex h-screen items-center justify-center;
+  }
+}
