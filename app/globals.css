@@ -25,12 +25,12 @@
 
 @layer components {
   .sidebar-icons {
-    @apply relative flex items-center justify-center float-start h-12 w-12 mt-2 mb-2 mx-auto bg-baselight text-textlight hover:bg-textlight hover:text-baselight dark:bg-basedark dark:text-textdark rounded-4xl dark:hover:bg-textdark dark:hover:text-overlaydark hover:rounded-2xl transition-all duration-300;
+    @apply relative flex items-center justify-center float-start h-12 w-12 m-2 ml-2 mr-2 mx-auto bg-baselight text-textlight hover:bg-textlight hover:text-baselight dark:bg-basedark dark:text-textdark rounded-4xl dark:hover:bg-textdark dark:hover:text-overlaydark hover:rounded-2xl transition-all duration-300;
   }
   .sidebar-icons-end {
-    @apply relative flex items-center justify-center h-12 w-12 mb-2 mx-auto bg-baselight text-textlight dark:bg-basedark dark:text-textdark rounded-4xl hover:text-baselight hover:bg-textlight dark:hover:bg-textdark dark:hover:text-overlaydark hover:rounded-2xl transition-all duration-300 mt-auto;
+    @apply relative flex items-center justify-center h-12 w-12 m-2 ml-2 mr-2 mx-auto bg-baselight text-textlight dark:bg-basedark dark:text-textdark rounded-4xl hover:text-baselight hover:bg-textlight dark:hover:bg-textdark dark:hover:text-overlaydark hover:rounded-2xl transition-all duration-300 mt-auto;
   }
   body {
-    @apply bg-baselight text-textlight dark:bg-basedark dark:text-textdark pr-30 text-center flex h-screen items-center justify-center;
+    @apply bg-baselight text-textlight dark:bg-basedark dark:text-textdark  text-center flex h-screen items-center justify-center;
   }
 }
