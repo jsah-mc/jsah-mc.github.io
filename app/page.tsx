@@ -7,6 +7,75 @@ export default function Home() {
       <p className="animate-wiggle bg-transparent transition-all duration-1000">
         Wassup
       </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>{" "}
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
+      <p className="animate-wiggle bg-transparent transition-all duration-1000">
+        Wassup
+      </p>
     </div>
   );
 }
