@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import "tailwindcss";
 
 @theme {
+  --font-permanentmarker: "Permanent Marker";
   --color-basedark: #11111b;
   --color-surfacedark: #1e1e2e;
   --color-textdark: #cdd6f4;
@@ -11,26 +13,43 @@
   --color-textlight: #575279;
   --color-overlaylight: #f2e9e1;
   --color-subtlelight: #797593;
+  --color-primarydark: #89b4fa;
+  --color-primarylight: #286983;
   --animate-wiggle: wiggle 1000ms ease-in-out infinite;
   @keyframes wiggle {
     0%,
     100% {
-      transform: rotate(-10deg);
+      transform: rotate(-5deg);
     }
     50% {
-      transform: rotate(10deg);
+      transform: rotate(5deg);
     }
   }
 }
 
 @layer components {
-  .sidebar-icons {
-    @apply relative flex items-center justify-center float-start h-12 w-12 m-2 ml-2 mr-2 mx-auto bg-baselight text-textlight hover:bg-textlight hover:text-baselight dark:bg-basedark dark:text-textdark rounded-4xl dark:hover:bg-textdark dark:hover:text-overlaydark hover:rounded-2xl transition-all duration-300;
+  .TopBar-icons {
+    @apply relative flex items-center justify-center float-start h-12 w-12 m-2 ml-2 mr-2 mx-auto bg-baselight text-textlight hover:bg-textlight hover:text-baselight dark:bg-basedark dark:text-textdark rounded-4xl dark:hover:bg-textdark dark:hover:text-overlaydark hover:rounded-2xl hover:animate-wiggle transition-all duration-300;
   }
-  .sidebar-icons-end {
-    @apply relative flex items-center justify-center h-12 w-12 m-2 ml-2 mr-2 mx-auto bg-baselight text-textlight dark:bg-basedark dark:text-textdark rounded-4xl hover:text-baselight hover:bg-textlight dark:hover:bg-textdark dark:hover:text-overlaydark hover:rounded-2xl transition-all duration-300 mt-auto;
+  .TopBar-icons-end {
+    @apply relative flex items-center justify-center h-12 w-12 m-2 ml-2 mr-2 mx-auto bg-baselight text-textlight dark:bg-basedark dark:text-textdark rounded-4xl hover:text-baselight hover:bg-textlight dark:hover:bg-textdark dark:hover:text-overlaydark hover:rounded-2xl hover:animate-wiggle transition-all duration-300;
   }
   body {
-    @apply bg-baselight text-textlight dark:bg-basedark dark:text-textdark  text-center flex h-screen items-center justify-center;
+    @apply bg-baselight text-textlight dark:bg-basedark dark:text-textdark pt-10 pl-28 font-permanentmarker text-center;
+  }
+
+  [data-component="tooltip"][data-slot="base"] {
+    background-color: var(--color-textlight);
+    color: var(--color-baselight);
+  }
+  [data-component="tooltip"][data-slot="arrow"] {
+    fill: var(--color-textlight);
+  }
+  .dark [data-component="tooltip"][data-slot="base"] {
+    background-color: var(--color-textdark);
+    color: var(--color-basedark);
+  }
+  .dark [data-component="tooltip"][data-slot="arrow"] {
+    fill: var(--color-textdark);
   }
 }
