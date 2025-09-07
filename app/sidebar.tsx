@@ -3,6 +3,7 @@
 import { useState, MouseEventHandler, ReactNode } from "react";
 import { FaHouse, FaGithub, FaUser } from "react-icons/fa6";
 import { FaSmile } from "react-icons/fa";
+import { TbSourceCode } from "react-icons/tb";
 
 // ✅ Type definition for reusable icon components
 interface IconProps {
@@ -64,7 +65,13 @@ export default function SideBar() {
           ClickFunc={() => console.log("Secret Found")}
         />
       </span>
-
+      <SideBarIconEnd
+        icon={<TbSourceCode size={28} />}
+        tooltip="Source Code"
+        ClickFunc={() =>
+          window.open("https://github.com/jsah-mc/jsah-mc.github.io", "_blank")
+        }
+      />
       <SideBarIconEnd
         icon={<FaGithub size={28} />}
         tooltip="GitHub"
