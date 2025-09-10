@@ -1,10 +1,14 @@
 "use client";
 
-import { useState, MouseEventHandler, ReactNode } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 import { Tooltip } from "@heroui/tooltip";
 import { FaHouse, FaGithub, FaUser } from "react-icons/fa6";
-import { FaSmile } from "react-icons/fa";
 import { TbSourceCode } from "react-icons/tb";
+
+type NavbarProps = {
+  page: string;
+  setPage: (page: string) => void;
+};
 
 // ✅ Type definition for reusable icon components
 interface IconProps {
@@ -42,34 +46,21 @@ const TopBarIconEnd: React.FC<IconProps> = ({ icon, tooltip, ClickFunc }) => (
 );
 
 // ✅ Main TopBar component
-export default function TopBar() {
-  const [showSecret, setShowSecret] = useState(false); // 🔧 toggle state
-
+export default function TopBar({ page, setPage }: NavbarProps) {
   return (
     <div className="fixed w-20 top-4 left-4 bottom-4 flex flex-col rounded-full bg-overlaylight p-2 text-textlight shadow-lg dark:bg-overlaydark dark:text-textdark">
       <TopBarIcon
         icon={<FaHouse size={28} />}
         tooltip="Home"
-        ClickFunc={() => window.open("/")}
+        ClickFunc={() => setPage("home")}
       />
 
       <TopBarIcon
         icon={<FaUser size={28} />}
-        tooltip="User"
-        ClickFunc={() => setShowSecret((prev) => !prev)}
+        tooltip="About"
+        ClickFunc={() => setPage("about")}
       />
 
-      <span
-        className={`transition-all duration-1000 ${
-          showSecret ? "visible opacity-100" : "invisible opacity-0"
-        }`}
-      >
-        <TopBarIcon
-          icon={<FaSmile size={28} />}
-          tooltip="Secret"
-          ClickFunc={() => console.log("Secret Found")}
-        />
-      </span>
       <div className="flex flex-grow items-center justify-center text-center">
         <p className="2m-0 p-0">
           jsah
