@@ -1,4 +1,3 @@
-import NixDotsMDX from "./docs/nixdots.mdx";
 export default function NixDots() {
   return (
     <div>
