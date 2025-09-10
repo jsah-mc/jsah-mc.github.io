@@ -4,6 +4,7 @@ import { MouseEventHandler, ReactNode } from "react";
 import { Tooltip } from "@heroui/tooltip";
 import { FaHouse, FaGithub, FaUser } from "react-icons/fa6";
 import { TbSourceCode } from "react-icons/tb";
+import { SiNixos } from "react-icons/si";
 
 type NavbarProps = {
   page: string;
@@ -14,18 +15,29 @@ type NavbarProps = {
 interface IconProps {
   icon: ReactNode;
   tooltip: string;
+  selected?: boolean;
   ClickFunc?: MouseEventHandler<HTMLDivElement>;
 }
 
 // ✅ Top icon component
-const TopBarIcon: React.FC<IconProps> = ({ icon, tooltip, ClickFunc }) => (
+const TopBarIcon: React.FC<IconProps> = ({
+  icon,
+  tooltip,
+  selected,
+  ClickFunc,
+}) => (
   <Tooltip
     content={tooltip}
     placement="right"
     showArrow={true}
     closeDelay={200}
   >
-    <div className="TopBar-icons" onClick={ClickFunc}>
+    <div
+      className={`TopBar-icons cursor-pointer transition${
+        selected ? " selected" : ""
+      }`}
+      onClick={ClickFunc}
+    >
       {icon}
     </div>
   </Tooltip>
@@ -39,7 +51,7 @@ const TopBarIconEnd: React.FC<IconProps> = ({ icon, tooltip, ClickFunc }) => (
     showArrow={true}
     closeDelay={200}
   >
-    <div onClick={ClickFunc} className="TopBar-icons-end">
+    <div onClick={ClickFunc} className="TopBar-icons-end cursor-pointer">
       <span>{icon}</span>
     </div>
   </Tooltip>
@@ -52,19 +64,26 @@ export default function TopBar({ page, setPage }: NavbarProps) {
       <TopBarIcon
         icon={<FaHouse size={28} />}
         tooltip="Home"
+        selected={page === "home"}
         ClickFunc={() => setPage("home")}
       />
 
       <TopBarIcon
         icon={<FaUser size={28} />}
         tooltip="About"
+        selected={page === "about"}
         ClickFunc={() => setPage("about")}
       />
-
+      <TopBarIcon
+        icon={<SiNixos size={28} />}
+        tooltip="Nixos Dotfiles"
+        selected={page === "nixdots"}
+        ClickFunc={() => setPage("nixdots")}
+      />
       <div className="flex flex-grow items-center justify-center text-center">
         <p className="2m-0 p-0">
           jsah
-          <br></br>
+          <br />
           mc
         </p>
       </div>

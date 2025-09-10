@@ -31,11 +31,14 @@
   .TopBar-icons {
     @apply relative flex items-center justify-center float-start h-12 w-12 m-2 ml-2 mr-2 mx-auto bg-baselight text-textlight hover:bg-textlight hover:text-baselight dark:bg-basedark dark:text-textdark rounded-4xl dark:hover:bg-textdark dark:hover:text-overlaydark hover:rounded-2xl hover:animate-wiggle transition-all duration-300;
   }
+  .TopBar-icons.selected {
+    @apply rounded-2xl bg-primarylight text-baselight dark:bg-primarydark dark:text-basedark font-bold;
+  }
   .TopBar-icons-end {
     @apply relative flex items-center justify-center h-12 w-12 m-2 ml-2 mr-2 mx-auto bg-baselight text-textlight dark:bg-basedark dark:text-textdark rounded-4xl hover:text-baselight hover:bg-textlight dark:hover:bg-textdark dark:hover:text-overlaydark hover:rounded-2xl hover:animate-wiggle transition-all duration-300;
   }
   body {
-    @apply bg-baselight text-textlight dark:bg-basedark dark:text-textdark pt-10 pl-28 font-permanentmarker text-center;
+    @apply bg-baselight text-textlight dark:bg-basedark dark:text-textdark pt-10 pl-28 font-permanentmarker;
   }
 
   [data-component="tooltip"][data-slot="base"] {
@@ -51,5 +54,8 @@
   }
   .dark [data-component="tooltip"][data-slot="arrow"] {
     fill: var(--color-textdark);
+  }
+  code {
+    @apply bg-overlaylight dark:bg-overlaydark text-textlight dark:text-textdark p-1 rounded;
   }
 }

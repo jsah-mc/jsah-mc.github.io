@@ -2,6 +2,7 @@
 import "./globals.css";
 import { useState } from "react";
 import TopBar from "./topbar";
+import NixDots from "./nixdots";
 
 export default function Home() {
   const [page, setPage] = useState("home");
@@ -26,10 +27,9 @@ export default function Home() {
           <p>This is the about section.</p>
         </section>
       )}
-      {page === "contact" && (
+      {page === "nixdots" && (
         <section>
-          <h2 className="text-3xl">Contact</h2>
-          <p>You can contact me at ...</p>
+          <NixDots />
         </section>
       )}
     </div>
