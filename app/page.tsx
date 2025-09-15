@@ -3,6 +3,8 @@ import "./globals.css";
 import { useState } from "react";
 import TopBar from "./topbar";
 import NixDots from "./nixdots";
+import AntiBullying from "./anti-bullying";
+import PosterGallery from "./poster-gallery";
 
 export default function Home() {
   const [page, setPage] = useState("home");
@@ -32,6 +34,12 @@ export default function Home() {
           <NixDots />
         </section>
       )}
+      {page === "antibullying" && (
+        <section>
+          <AntiBullying />
+        </section>
+      )}
+      {page === "posterGallery" && <PosterGallery />}
     </div>
   );
 }

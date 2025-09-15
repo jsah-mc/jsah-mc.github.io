@@ -2,7 +2,7 @@
 
 import { MouseEventHandler, ReactNode } from "react";
 import { Tooltip } from "@heroui/tooltip";
-import { FaHouse, FaGithub, FaUser } from "react-icons/fa6";
+import { FaHouse, FaGithub, FaUser, FaHeart, FaImages } from "react-icons/fa6";
 import { TbSourceCode } from "react-icons/tb";
 import { SiNixos } from "react-icons/si";
 
@@ -79,6 +79,19 @@ export default function TopBar({ page, setPage }: NavbarProps) {
         tooltip="Nixos Dotfiles"
         selected={page === "nixdots"}
         ClickFunc={() => setPage("nixdots")}
+      />
+      <TopBarIcon
+        icon={<FaHeart size={28} />}
+        tooltip="Stop Bullying"
+        selected={page === "antibullying"}
+        ClickFunc={() => setPage("antibullying")}
+      />
+
+      <TopBarIcon
+        icon={<FaImages size={28} />}
+        tooltip="Poster Gallery"
+        selected={page === "posterGallery"}
+        ClickFunc={() => setPage("posterGallery")}
       />
       <div className="flex flex-grow items-center justify-center text-center">
         <p className="2m-0 p-0">
